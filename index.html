@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ahmedrowaihi" />
+    <meta name="twitter:title" content="Build an SPA Without Any Framework" />
+    <meta
+      name="twitter:description"
+      content="How to create an SPA with No Framework, only vanilla Javascript"
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/practicaldev/image/fetch/s--WGXoQbsM--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAr8AAAAJGUxMTdlYzM4LWZmNmEtNGZiNi05Mjc0LTc1ODQ0MWZmYzU4Nw.png"
+    />
+    <title>SPA - No Framework | Ahmed Rowaihi</title>
+    <meta
+      name="description"
+      content="A simple and clean SPA Template, Styled With PicoCSS"
+    />
+    <!-- Twitter Meta Tags -->
+    <!-- Pico CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- custom style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="root" class="container">
+      <nav>
+        <ul>
+          <li>
+            <img
+              style="
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin: 0 auto;
+              "
+              src="https://pbs.twimg.com/profile_images/1485924409537961988/VBcCcsSo_400x400.jpg"
+              alt="Ahmed Rowaihi Profile Image"
+            />
+            <strong>SPA - No Framework</strong>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a onclick="route()" href="/">Home</a>
+          </li>
+          <li><a onclick="route()" href="/about">About</a></li>
+          <li><a onclick="route()" href="/404">404</a></li>
+          <li>
+            <a href="https://twitter.com/ahmedrowaihi" role="button">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main id="view_container" class="container">
+        <!-- here where your views changes -->
+      </main>
+    </main>
+    <script src="/router.js" defer></script>
+  </body>
+</html>
