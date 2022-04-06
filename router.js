@@ -5,17 +5,6 @@ const routes = {
 };
 // create an object to hold the routes
 
-const route = (event) => {
-  event = event || window.event;
-  //  get the event object
-  event.preventDefault();
-  //  prevent default behaviour
-  window.history.pushState({}, "", event.target.href);
-  //   change the url to the target href
-  handleLocation();
-  //   call handleLocation function
-};
-
 const handleLocation = async () => {
   const path = window.location.pathname;
   //   get current path name
@@ -27,9 +16,19 @@ const handleLocation = async () => {
   //   change view_container html to the fetched view html
 };
 
+handleLocation();
+// call handleLocation function
+
+const route = (event) => {
+  event = event || window.event;
+  //  get the event object
+  event.preventDefault();
+  //  prevent default behaviour
+  window.history.pushState({}, "", event.target.href);
+  //   change the url to the target href
+  handleLocation();
+  //   call handleLocation function
+};
 window.onpopstate = handleLocation;
 //   listen for popstate event
 window.route = route;
-
-handleLocation();
-// call handleLocation function
