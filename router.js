@@ -1,6 +1,7 @@
 const routes = {
   404: "/views/404.html",
   "/": "/views/home.html",
+  "/SPA-NoFrameWork-Explained/": "/views/home.html",
   "/about": "/views/about.html",
 };
 // create an object to hold the routes
