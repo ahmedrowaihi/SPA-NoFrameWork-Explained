@@ -3,6 +3,11 @@ const routes = {
   "/": "/views/home.html",
   "/about": "/views/about.html",
 };
+function subcribeAllAnchors() {
+  document
+    .querySelectorAll("a")
+    .forEach((el) => el.addEventListener("click", route));
+}
 // create an object to hold the routes
 
 const handleLocation = async () => {
@@ -14,9 +19,11 @@ const handleLocation = async () => {
   // fetch current path view html
   document.getElementById("view_container").innerHTML = html;
   //   change view_container html to the fetched view html
+  subcribeAllAnchors();
 };
 
 handleLocation();
+
 // call handleLocation function
 
 const route = (event) => {
